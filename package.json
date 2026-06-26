@@ -11,11 +11,13 @@
   "dependencies": {
     "@react-router/node": "8.0.0",
     "@react-router/serve": "8.0.0",
+    "@ungap/with-resolvers": "^0.1.0",
     "clsx": "^2.1.1",
     "isbot": "^5.1.36",
     "pdfjs-dist": "^6.0.227",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
+    "react-dropzone": "^15.0.0",
     "react-router": "8.0.0",
     "tailwind-merge": "^3.6.0",
     "zustand": "^5.0.14"
@@ -24,6 +26,7 @@
     "@react-router/dev": "8.0.0",
     "@tailwindcss/vite": "^4.2.2",
     "@types/node": "^22",
+    "@types/pdfjs-dist": "^2.10.377",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "tailwindcss": "^4.2.2",

@@ -13,9 +13,12 @@ const Auth = () => {
     const next = location.search.split('next=')[1];
     const navigate = useNavigate();
 
+
     useEffect(() => {
-        if(auth.isAuthenticated) navigate(next);
-    }, [auth.isAuthenticated, next])
+        if (auth.isAuthenticated) {
+            navigate("/");
+        }
+    }, [auth.isAuthenticated, navigate]);
 
     return (
         <main className="bg-[url('/images/bg-auth.svg')] bg-cover min-h-screen flex items-center justify-center">
@@ -33,7 +36,13 @@ const Auth = () => {
                         ) : (
                             <>
                                 {auth.isAuthenticated ? (
-                                    <button className="auth-button" onClick={auth.signOut}>
+                                    <button
+                                        className="auth-button"
+                                        onClick={async () => {
+                                            await auth.signOut();
+                                            console.log("Logout clicked");
+                                        }}
+                                    >
                                         <p>Log Out</p>
                                     </button>
                                 ) : (
